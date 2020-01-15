@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lengwe.iVolunteer.ActivityEdit"
+    android:orientation="vertical">
+    <!--android:background="@drawable/shore">-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Edit Activity"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:layout_marginBottom="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/lightgray_2"
+                android:id="@+id/edit_activity_title"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0dp"/>
+
+            <ImageView
+                android:id="@+id/edit_activity_image_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/activity_ico"
+                android:onClick="edit_image_btn"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_activity_name_parent_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_activity_name_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Activity"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_activity_Volunteam_firstName_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_activity_Volunteam_firstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Volunteam First Name"
+                    android:inputType="textPersonName"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_activity_Volunteam_sirName_parent_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_activity_Volunteam_sirName_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Volunteam Sir Name"
+                    android:inputType="textPersonName"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_activity_description_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Activity Description"
+                    android:inputType="textPersonName"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_activity_location_parent_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_activity_location_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"
+                    android:inputType="text"
+                    android:layout_marginBottom="16dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_location_id"
+                android:text="Pick Location"
+                android:background="@drawable/rectagle_button"
+                android:textAllCaps="false"
+                android:onClick="getLocation"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_pick_date_id"
+                android:text="Pick Date"
+                android:background="@drawable/rectagle_button"
+                android:textAllCaps="false"
+                android:onClick="edit_datePicker"
+                android:layout_marginBottom="16dp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_pick_time_id"
+                android:text="Pick Time"
+                android:background="@drawable/rectagle_button"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:onClick="edit_timePicker"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_submit_activity_id"
+                android:text="Submit"
+                android:background="@drawable/submit_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/transparent"
+                android:onClick="edit_submit_btn_clicked"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
